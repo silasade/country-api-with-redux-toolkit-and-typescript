@@ -1,0 +1,11 @@
+.spinner {
+    position: absolute;
+    left: 50%;
+    top:30%;
+    animation: loading 2s normal 0s infinite backwards;
+}
+
+@keyframes loading {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

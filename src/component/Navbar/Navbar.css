@@ -1,0 +1,13 @@
+.Navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    width: auto;
+}
+.toggle{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 20px;
+}

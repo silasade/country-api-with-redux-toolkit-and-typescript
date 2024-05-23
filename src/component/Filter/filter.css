@@ -1,0 +1,43 @@
+.filters{
+    position: absolute;
+    list-style: none;
+    line-height: 25px;
+    z-index: 10000;
+    animation-name: animate;
+    animation-duration:1s ;
+    width:200px;
+    padding: 10px;
+
+}
+.filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+li{
+    cursor: pointer;
+}
+li:hover{
+    font-weight: bolder;
+    background-color: gray;
+}
+.button{
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px;
+    width: 200px;
+    justify-content: space-between;
+}
+@keyframes animate {
+    from{transform: translateY(-20px);}
+    to {transform: translateY(0px);}
+}
+@media(max-width:500px){
+    .filter{
+        display: flex;
+        flex-direction: column;
+    }
+}

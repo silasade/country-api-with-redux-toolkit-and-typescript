@@ -19,26 +19,28 @@ export const Country=({flag,name,population,Region,capital}:CountryProp)=>{
     }
     
     return(
+        <>
         <div className="country" style={{backgroundColor:theme.boxBackGroundColor}}>
             <div>
                 <img className="flag" src={flag} alt="flag"/>
             </div>
             <div className="contents">
                 <div>
-                    <h4 onClick={()=>handleDetails(name)} style={{color:theme.boxColor}}>{name}</h4>
+                    <h4 onClick={()=>handleDetails(name)} className="name" style={{color:theme.boxColor}}>{name}</h4>
                 </div>
                 <div>
                     <div className="content">
-                        <div  style={{color:theme.boxColor}}>Population:</div><div style={{color:theme.color}}>{population}</div>
+                        <div  style={{color:theme.boxColor}}>Population:&nbsp;</div><div style={{color:theme.color}}>{population}</div>
                     </div>
                     <div className="content">
-                        <div style={{color:theme.boxColor}}>Region:</div><div style={{color:theme.color}}>{Region}</div>
+                        <div style={{color:theme.boxColor}}>Region:&nbsp;</div><div style={{color:theme.color}}>{Region}</div>
                     </div>
                     <div className="content">
-                        <div style={{color:theme.boxColor}}>Capital:</div><div style={{color:theme.color}}>{capital}</div>
+                        <div style={{color:theme.boxColor}}>Capital:&nbsp;</div><div style={{color:theme.color}}>{capital}</div>
                     </div>
                 </div>
             </div>
         </div>
+        </>
     )
 }

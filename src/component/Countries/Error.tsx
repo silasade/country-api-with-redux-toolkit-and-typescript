@@ -3,6 +3,6 @@ type ErrorProp={
 }
 export const Error=({errorMsg}:ErrorProp)=>{
     return(
-        <h1 style={{color:"red", textAlign:"center"}}>{errorMsg}</h1>
+        <h3 style={{color:"red", textAlign:"center"}}>{errorMsg}</h3>
     )
 }

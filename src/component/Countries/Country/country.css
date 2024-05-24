@@ -1,9 +1,11 @@
+
 .country{
     flex: 23%;
     border-radius: 0.2cm;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+transition: 1s;
 }
 .content{
     display: flex;
@@ -13,6 +15,14 @@
     width: 100%;
     border-top-left-radius: 0.2cm;
     border-top-right-radius: 0.2cm;
+    
+}
+.name{
+    transition: 1s;
+}
+.name:hover{
+    cursor: pointer;
+    transform: translateY(5px);
 
 }
 .contents{

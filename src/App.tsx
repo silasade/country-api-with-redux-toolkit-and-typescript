@@ -15,8 +15,6 @@ function App() {
       <Provider store={store}>
         <Body/>
         <Navbar/>
-        <Filter/>
-        
         <Routes>
           <Route element={<Countries/>} path='/'/>
           <Route element={<Country/>} path='/country'/>

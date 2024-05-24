@@ -5,6 +5,7 @@ import { Loading } from "../Loading/Loading";
 import { Country } from "../Country/Country";
 import { Error } from "../Error";
 import "./Countries.css"
+import { Filter } from "../../Filter/Filter"
 export const Countries=()=>{
     const dispatch=useAppDispatch()
     const country=useAppSelector(state=>state.coutries)
@@ -13,6 +14,7 @@ export const Countries=()=>{
     },[])
     return(
         <div>
+            <Filter/>
             {country.loading && <Loading/>}
             <div className="countries">
                 {(!country.loading && country.countries.length>0) && country.countries.map(item=>(

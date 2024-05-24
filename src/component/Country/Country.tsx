@@ -4,6 +4,7 @@ import { Error } from "../Countries/Error";
 import { useNavigate } from "react-router";
 import { fetchCountry } from "../../features/CountryDetails/CountrySlice";
 import "./country.css"
+import back from "./back (1).png"
 import { useEffect, useState } from "react";
 function Countrys() {
   const country = useAppSelector((state) => state.country);
@@ -30,12 +31,15 @@ function Countrys() {
   return (
     <div>
       {country.loading && <Loading />}
-      
+      <div>
+          <button style={{backgroundColor:theme.boxBackGroundColor, color:theme.color}} className="back-button" onClick={() => navigate(-1)}>
+            <img className="back" src={back} alt="back"/>
+            Back</button>
+        </div>
       {!country.loading && country.country.name.common && (
         <div className="details">
           <div>
-          <button onClick={() => navigate(-1)}>Back</button>
-            <img className="flags" src={country.country.flags.svg} alt={country.country.flags.alt} />
+              <img className="flags" src={country.country.flags.svg} alt={country.country.flags.alt} />
           </div>
           <div className="contents">
           <div>
@@ -43,23 +47,23 @@ function Countrys() {
           </div>
           <div >
             <div className="content">
-              <div style={{ color: theme.boxColor }}>Native Name:</div>
+              <div style={{ color: theme.boxColor }}>Native Name:&nbsp;</div>
               <div style={{ color: theme.color }}>{nativeName}</div>
             </div>
             <div className="content">
-              <div style={{ color: theme.boxColor }}>Population:</div>
+              <div style={{ color: theme.boxColor }}>Population:&nbsp;</div>
               <div style={{ color: theme.color }}>{country.country.population}</div>
             </div>
             <div className="content">
-              <div style={{ color: theme.boxColor }}>Region:</div>
+              <div style={{ color: theme.boxColor }}>Region:&nbsp;</div>
               <div style={{ color: theme.color }}>{country.country.region}</div>
             </div>
             <div className="content">
-              <div style={{ color: theme.boxColor }}>Sub Region:</div>
+              <div style={{ color: theme.boxColor }}>Sub Region:&nbsp;</div>
               <div style={{ color: theme.color }}>{country.country.subregion}</div>
             </div>
             <div className="content">
-              <div style={{ color: theme.boxColor }}>Capital:</div>
+              <div style={{ color: theme.boxColor }}>Capital:&nbsp;</div>
               <div style={{ color: theme.color }}>{country.country.capital.join(", ")}</div>
             </div>
           </div>
@@ -67,7 +71,7 @@ function Countrys() {
           </div>
           <div className="contents">
             <div className="content">
-              <div style={{ color: theme.boxColor }}>Currencies:</div>
+              <div style={{ color: theme.boxColor }}>Currencies:&nbsp;</div>
               <div style={{ color: theme.color }}>
                 {Object.keys(country.country.currencies).map(
                   (key) => country.country.currencies[key].name
@@ -76,7 +80,7 @@ function Countrys() {
              
             </div>
             <div className="content">
-            <div style={{ color: theme.boxColor }}>languages:</div>
+            <div style={{ color: theme.boxColor }}>languages:&nbsp;</div>
 
             <div style={{ color: theme.color }}>
                 {Object.keys(country.country.languages).map(

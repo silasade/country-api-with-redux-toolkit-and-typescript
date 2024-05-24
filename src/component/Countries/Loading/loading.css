@@ -1,7 +1,7 @@
 .spinner {
     position: absolute;
     left: 50%;
-    top:30%;
+    top:50%;
     animation: loading 2s normal 0s infinite backwards;
 }
 
@@ -9,3 +9,4 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+

@@ -18,13 +18,15 @@ export function Modal({name,show,handleShow}:ModalProps){
     })
     const theme=useAppSelector(state=>state.theme)
     return(
-        <div className="modal" style={{backgroundColor:theme.boxBackGroundColor}}>
-            <div>
+        <div className="modal" style={{backgroundColor:theme.boxBackGroundColor,color:theme.boxColor, opacity:1}}>
+            <div className="cancel">
             <img src={close}  className="close" alt="close" onClick={handleShow}/>
+           
             </div>
             
             <div>
-                <h2>{name} is not a Country</h2>
+            <hr />
+                <h4>"{name.charAt(0).toUpperCase() + name.slice(1)}" is not a Country.</h4>
             </div>
         </div>
     )

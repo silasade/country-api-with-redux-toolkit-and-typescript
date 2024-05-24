@@ -69,6 +69,7 @@ li:hover{
         display: flex;
         flex-direction: column;
         gap: 20px;
+        padding-bottom: 10px;
     }
     input{
         width: 85%;
@@ -94,5 +95,21 @@ li:hover{
     }
     .filters{
         width: 84%;
+    }
+}
+@media(max-width:350px){
+    .filter{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    input{
+        width: 80%;
+    }
+    .button{
+        width: 100%;
+    }
+    .filters{
+        width: 82%;
     }
 }

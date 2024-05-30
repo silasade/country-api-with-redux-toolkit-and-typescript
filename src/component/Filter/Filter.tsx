@@ -35,11 +35,12 @@ export const Filter=()=>{
         dispatch(fetchCountry(name))
         console.log(country.error)
         if (country.error.length>0){
-            localStorage.setItem("name",JSON.stringify(name))
-            navigate('/country')
+            setModal(true)
         }
         else{
-            setModal(true)
+           
+            localStorage.setItem("name",JSON.stringify(name))
+            navigate('/country')
         }
     }
     function handleShow(){
